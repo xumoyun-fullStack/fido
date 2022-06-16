@@ -1,0 +1,18 @@
+{
+  "name": "client-manager-fido",
+  "version": "1.0.2",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "client-manager-fido"
+  ],
+  "author": "Bobajanov Xumoyun",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "sequelize": "^6.20.1"
+  }
+}
