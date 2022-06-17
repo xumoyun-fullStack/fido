@@ -1,5 +1,6 @@
 const postgres = require("./src/modules/postgres");
 let psql = postgres();
+const { Op } = require("sequelize");
 
 module.exports.add_client = async function(name, surname, birth_date, age){
     try{
@@ -114,3 +115,24 @@ module.exports.get_element_by_id = async function(id){
         console.log(e + "")
     }
 }
+
+// module.exports.get_elements_by_id = async function(id, name, surname, from_date, to_date){
+//     try{
+//         psql = await psql;
+//         let clients = await psql.clients.findAll({
+//             where: {
+//               id: id ? { [Op.eq]: id } : {},
+//               name: name ? { [Op.iLike]: `%${name}%` } : {},
+//               surname: surname ? { [Op.iLike]: `%${surname}%` } : {},
+//               from_date: from_date ? { [Op.gte]: from_date } : {},
+//               to_date: to_date ? { [Op.lte]: to_date } : {}
+//             }
+//           })
+          
+//           return ({
+//             clients
+//           })
+//     }catch(e){
+//         console.log(e )
+//     }
+// }
